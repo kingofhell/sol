@@ -56,7 +56,8 @@ ROOT_URLCONF = 'cbsol.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ '/sol/core/templates/',
+			],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +123,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "js"),
+    os.path.join(BASE_DIR, "css"),
+    os.path.join(BASE_DIR, "audio"),
+    os.path.join(BASE_DIR, "fi"),
+    os.path.join(BASE_DIR, "fonts"),
+    os.path.join(BASE_DIR, "img"),
+    os.path.join(BASE_DIR, "rs-plugin"),
+    os.path.join(BASE_DIR, "pic"),
+    os.path.join(BASE_DIR, "tuner"),
+    '/static/',
+)
